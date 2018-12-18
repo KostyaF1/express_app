@@ -9,6 +9,7 @@ COPY package.json /express_app
 RUN npm install
 
 COPY . /express_app
+
 CMD node app.js
 EXPOSE 3000
 
