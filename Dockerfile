@@ -11,6 +11,7 @@ RUN npm install
 COPY . /express_app
 
 CMD node app.js
+
 EXPOSE 3000
 
 
