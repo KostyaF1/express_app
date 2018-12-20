@@ -1,11 +1,12 @@
 #!bin/bash
 
-a=$(docker images -q kostyaf1/hello-task7)
+export IMAGE_NAME
 
-if [ "$a" != "" ] 
+CONTAINER_IDs=$(docker images -q $IMAGE_NAME)
+
+if [ "$CONTAINER_IDs" != "" ]
   then
-   # docker stop task_7; docker rm task_7 
-    docker rmi $a 
+    docker rmi $CONTAINER_IDs
 fi
 
 
