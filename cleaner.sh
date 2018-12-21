@@ -9,7 +9,7 @@ CONTAINER_IDs=$(docker images -q $IMAGE_NAME)
 #If there are more then 0 images - remove them
 if [ "$CONTAINER_IDs" != "" ]
   then
-    docker rmi $CONTAINER_IDs
+    docker rmi -f $CONTAINER_IDs
 fi
 
 
